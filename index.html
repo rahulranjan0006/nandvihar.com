@@ -1,0 +1,449 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="images2/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="images2/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+
+
+<script type="text/javascript" src="date_time.js"></script>
+    
+            
+<title>Nand Vihar</title>
+<style>
+/* Main */
+#menu {
+    width: 100%;
+    margin: 0;
+    padding: 5px  0 0 0;
+    list-style: none;  
+    background-color: #111;
+    background-image: linear-gradient(#4bb, #111);
+    border-radius: 0px;
+    box-shadow: 0 2px 1px #9c9c9c;
+}
+
+#menu li {
+    float: left;
+    padding: 0 0 10px 0;
+    position: relative;
+}
+
+#menu a {
+    float: left;
+    height: 15px;
+    padding: 0 25px;
+    color: #999;
+    text-transform: uppercase;
+    font: bold 12px/25px Arial, Helvetica;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+}
+
+#menu li:hover > a {
+    color: #fafafa;
+	
+}
+
+*html #menu li a:hover { /* IE6 */
+    color: #fafafa;
+}
+
+#menu li:hover > ul {
+    display: block;
+}
+/* Sub-menu */
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 99999;    
+    background-color: #444;   
+    background-image: linear-gradient(#444, #111);    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#menu ul li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;  
+    box-shadow: 0 1px 0 #111111, 
+                0 2px 0 #777777;
+}
+
+#menu ul li:last-child { 
+    box-shadow: none;    
+}
+
+#menu ul a {    
+    padding: 10px;
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+
+*html #menu ul a { /* IE6 */   
+    height: 10px;
+    width: 150px;
+}
+
+*:first-child+html #menu ul a { /* IE7 */    
+    height: 10px;
+    width: 150px;
+}
+
+#menu ul a:hover {
+    background-color: #0186ba;
+    background-image: linear-gradient(#04acec, #0186ba);
+}
+
+#menu ul li:first-child a {
+    border-radius: 5px 5px 0 0;
+}
+
+#menu ul li:first-child a:after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+}
+
+#menu ul li:first-child a:hover:after {
+    border-bottom-color: #04acec; 
+}
+
+#menu ul li:last-child a {
+    border-radius: 0 0 5px 5px;
+}
+
+/* Clear floated elements */
+#menu:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+#menu ul li:first-child a:after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+}
+
+#menu ul li:first-child a:hover:after {
+    border-bottom-color: #04acec; 
+}
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });        
+</script>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+var MenuBar2 = new Spry.Widget.MenuBar("MenuBar2", {imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+
+<style type="text/css">
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #06C;
+	
+}
+body {
+	background-color: #fff;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom:2px;
+	}
+a {
+	font-size: medium;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: underline;
+}
+.topNews{ width:100%; float:left; background:#f3f3f3; margin-top:3px;}
+.topNews h2{ font-size:14px; color:#803d43; padding:7px 12px 0px 12px ; float:left; margin:0;}
+.topMarquee{ float:left; margin:0 0 0 15px; width:85%;  padding:6px 0;} 
+.topMarquee ul{ margin:0; float:left;}
+.topMarquee ul li{ display:inline; padding:0 15px 0 5px; list-style-type:disc; margin:0 10px;}
+.topMarquee ul li a{ color:#3d4f5d;}
+
+
+#slideShowImages
+{
+width:100%;
+height:306px;
+border:2px solid red;
+margin:0px;
+padding:0px; 
+float:left;  
+}
+.imgn1{
+width:100%;
+height:306px;
+}
+</style>
+<link href="SpryAssets/SpryMenuBarVertical.css" rel="stylesheet" type="text/css" />
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+</head>
+<body text="#0099FF" link="#00FFCC" vlink="#CC6633" alink="#66FF99" leftmargin="10%" topmargin=""  rightmargin="300">
+<table border="0">
+<tr>
+	<td><img src="logo.png" width="100%" height="30%"></td>
+	<td width="80%" style="background-repeat:no-repeat;background-size:100% 300%">
+	
+	<p style="float:right"><span id="date_time"></span>
+            <script type="text/javascript">window.onload = date_time('date_time');
+			</script>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+	<h1 align="left"><font color="#770266" size="100" style="font-family:Lucida Calligraphy;">Nand Vihar<br></h1> 
+	<h5 align="center"><font color="#660000" size="2" style="font-family:Lucida Calligraphy;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A complete market...!!!</h5>
+	
+	
+	<!--  
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+</tr>
+ </table>
+<!-- <div style="width:100%">   <div style="background-color:#b5dcb3; width:100%">       
+<center>
+  <img src="images2/logo.jpg" width="100%" height="150px" style="border-top:2px solid red;border-left:2px solid red;border-right:2px solid red"/>
+</center> -->
+<ul id="menu">
+    <li><a href="ex.html">Home</a></li>
+    <li>
+        <a href="#">About Us</a>
+        <ul>
+            <li><a href="">Information Brouchure</a></li>
+            <li><a href="">Enquiry Form</a></li>
+            </ul>
+    </li>
+    <li>
+        <a href="#">Facilites</a>
+        <ul>
+            <li><a href="">Application Form</a></li>
+            <li><a href="">Registration Form</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Vet.TRAINING</a>
+        <ul>
+            <li><a href="">About IT Industry</a></li>
+            <li><a href="">Training Form</a></li>
+        </ul>
+    </li>
+    <li><a href="">Gallery</a></li>
+    <li><a href="">Events</a></li>
+    <li><a href="contact1.html">Contact Us</a></li>
+</ul>
+<div class="topNews"><h2>Latest News</h2>
+    <marquee scrolldelay="2" scrollamount="2" onmouseout="this.start()" onmouseover="this.stop()" direction="left" class="topMarquee">
+      <ul class="fa-ul"><li><i class="fa-li fa fa-check-square"></i>      
+<a href="#">Medical help </a>&nbsp;<img src="./images2/newCircle.gif" alt=""></li>	 
+  <li><i class="fa-li fa fa-check-square"></i><a href="#">Judicial help</a>&nbsp;<img src="./images2/newCircle.gif" alt=""></li>	
+ <li><i class="fa-li fa fa-check-square"></i><a href="#">Free fooding & loddging</a>&nbsp;<img src="./images2/newCircle.gif" alt=""></li> 
+      	 </ul>
+    </marquee>
+</div>
+<div id="slideShowImages">
+    <img src="images2/1.jpg" alt="Slide 1" class="imgn1"/>
+    <img src="images2/2.jpg" alt="Slide 2" class="imgn1"/>
+	<img src="images2/3.jpg" alt="Slide 1" class="imgn1"/>
+    <img src="images2/4.jpg" alt="Slide 2" class="imgn1"/>
+	<img src="images2/5.jpg" alt="Slide 2" class="imgn1"/>
+</div> 
+<script src="images2/slideShow.js"></script>
+<style>
+.leftdiv{
+	width:25%;
+	height:400px;
+	float:left;
+	border:2px solid red;
+	margin-top:5px;
+	
+}
+.centerdiv{
+	width:48%;
+	height:400px;
+	float:left;
+	border:2px solid red;
+	margin-left:10px;
+	margin-top:5px;
+}
+.rightdiv1{
+	width:25%;
+	height:400px;
+	float:right;
+	border:2px solid red;
+	margin-top:5px;
+	padding:0px;
+	margin-bottom:0px;
+}
+.leftnews{
+	margin-left:10px;
+}
+.newsmarquee1
+{
+	padding:3px;
+	margin:0px;
+	height:90%;
+}
+.imgaboutnielit
+{
+	float:left;
+	//padding:0px 10px 5px 0px;
+	margin-right:7px;
+	margin-bottom:0px;
+}
+#divfooter
+{
+	//background:#B5DCB3;
+	background:#B5DCB3;
+	width:100%;
+	color:black; 
+	//position:absolute;
+	margin-bottom:10px;
+	margin-top:10px;
+	float:left;
+	height:15%;
+	border:2px solid red;
+	border-radius:3px 3px 0px 0px;
+}
+
+
+#map
+{
+	//background:#B5DCB3;
+	background:#B5DCB3;
+	width:100%;
+	color:black; 
+	//position:absolute;
+	margin-bottom:10px;
+	margin-top:10px;
+	float:left;
+	height:15%;
+	border:2px solid red;
+	border-radius:3px 3px 0px 0px;
+}
+#centerdiv,#leftdiv,#rightdiv{
+padding-top:0px;
+border-radius:10px 10px 5px 5px;
+border-color:red;
+border-width:2px;
+border-style:solid;
+overflow:hidden;
+background:white;
+}
+div>h4{
+padding:8px 0 5px 15px;
+display:block;
+background:#4bb362;
+color:#fff;
+font-size:20px;
+margin-top:0px;
+margin-bottom:0px;
+padding-left:5px;
+text-align:center;
+}
+</style> 
+<div class="leftdiv" id="leftdiv">
+<h4>Our Shops</h4>
+<div align="center" style="margin-top:2px;"></div>
+  <h5 align="center"></h5>
+<p align="center">
+<marquee direction="down" height="100%" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="2" scrolldelay="2" class="newsmarquee1">
+	<ul class="fa-ul">
+	    <li><i class="fa-li fa fa-arrow-circle-right"></i><p>rahul</p><a href=""><img src="rahul.jpg"   width="70%"></a>&nbsp;<img src="./images2/newCircle.gif" alt=""></li><br/>
+		<li><i class="fa-li fa fa-arrow-circle-right"></i><a href=""><img src="rahul.jpg"   width="70%"></a>&nbsp;<img src="./images2/newCircle.gif" alt=""></li><br/>
+		<li><i class="fa-li fa fa-arrow-circle-right"></i><a href=""><img src="rahul.jpg"   width="70%"></a>&nbsp;<img src="./images2/newCircle.gif" alt=""></li><br/>
+		<li><i class="fa-li fa fa-arrow-circle-right"></i><a href=""><img src="rahul.jpg"   width="70%"></a>&nbsp;<img src="./images2/newCircle.gif" alt=""></li><br/>
+		<li><i class="fa-li fa fa-arrow-circle-right"></i><a href=""><img src="rahul.jpg"   width="70%"></a>&nbsp;<img src="./images2/newCircle.gif" alt=""></li><br/>
+		 
+		<li><i class="fa-li fa fa-arrow-circle-right"></i><a href="">just keep it up</a></li><br/>
+		</ul>
+	 </marquee>
+</p>
+</div>
+<div class="centerdiv" id="centerdiv">
+<h4>About Rahul Ranjan</h4>
+<p align="justify" style="padding:5px 8px 5px 8px">
+<img src="images2/me.jpg" height="195" width="167" style="border:2px solid lightgreen;" class="imgaboutnielit"/>
+<b>Rahul Ranjan'/s</b> is one of the best coaching institutions of  Bihta(patna) . With an exclusive intention to promote high standards in education, for educational evolution, We offer courses for preparation of various competitive examinations like <b>Math,  Electronics,Electrical , PHYSICS , CHEMISTRY, MECHENICAL ,GRAPHICS , COMPUTER SCIENCE & ENGG , ENGLISH, SPOKEN ENGLISH , GD and so on.</b> Numerous tests are conducted in order to Judge yourself among others , even the smallest doubt, so that they could raise their self confidence. 
+</p>
+ <p style="margin:0px 7px 0px 7px" align="justify"> <b>Mission:</b> To spread awareness for competition education in Bihta and try to reduce the problem of unemployment , thousands of students already success to achieve their goals.&nbsp;&nbsp;&nbsp;<a href="">Read more Click Here....</a>
+ </p>
+</div>
+<div class="rightdiv1" id="rightdiv">
+<h4>Events & Notifications</h4>
+	<marquee direction="up" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="2" scrolldelay="2" class="newsmarquee1">
+	<ul class="fa-ul">
+	    <li><i class="fa-li fa fa-arrow-circle-right"></i><a href="">rahulranjan0006@gmail.com</a>&nbsp;<img src="./images2/newCircle.gif" alt=""></li><br/>
+		<li><i class="fa-li fa fa-arrow-circle-right"></i> <a href="">next version cooming soon </a><img src="./images2/newCircle.gif" alt=""></li><br/>
+		<li><i class="fa-li fa fa-arrow-circle-right"></i><a href="">rahulranjan0006 </a></li><br/>
+		<li><i class="fa-li fa fa-arrow-circle-right"></i><a href="">just keep it up</a></li><br/>
+		</ul>
+	 </marquee>
+	 
+</div>
+<div id="map" class="map1"> 
+ <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Za5sAPfmdUFkPObSfjsFKLFBlV8" width="100%" height="300"></iframe>
+</div>
+
+<div id="divfooter"> 
+<center><p>© Copyright</p>
+<p><small><b>Follow Us On : </b> </small></p>
+<a href="http://facebook.com/rahulranjan0006"/><img src="images2/facebook.jpg" width="30" height="30"/></a>&nbsp;&nbsp;
+<a href="http://twitter.com/rahulranjan0006"/><img src="images2/twitter.jpg" width="30" height="30" /></a>
+<p><b>Design & Developed By:</b> </p>
+<h5><B>Rahul Ranjan Student of 'O' LEVEL
+NATIONAL INSTITUTE OF ELECTRONICS AND INFORMATION TECHNOLOGY (NIELIT) PATNA</B></h5><a href="#top">Top</a>   
+</center>
+</div>
+ </body>
+</html>
